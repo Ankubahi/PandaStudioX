@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta -->
+  <title>PandaStudioX — High CTR Custom YouTube Thumbnails | From ₹99</title>
+  <meta name="description" content="PandaStudioX creates custom high-CTR YouTube thumbnails for gaming creators. Minecraft, BGMI, GTA 5, Free Fire & more. Express 6-hour delivery. From ₹99. 500+ thumbnails delivered." />
+  <meta name="keywords" content="YouTube thumbnail, custom thumbnail designer India, gaming thumbnail, Minecraft thumbnail, BGMI thumbnail, high CTR thumbnail, PandaStudioX" />
+  <meta name="author" content="PandaStudioX" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://pandastudiox.com/" />
+  <meta property="og:title"       content="PandaStudioX — Turn Views Into Clicks" />
+  <meta property="og:description" content="Custom high-CTR thumbnails for gaming creators. Express 6-hr delivery from ₹99. 200+ creators trust PandaStudioX." />
+  <meta property="og:image"       content="https://pandastudiox.com/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="PandaStudioX — High CTR YouTube Thumbnails" />
+  <meta name="twitter:description" content="Custom gaming thumbnails. 6-hr express delivery. From ₹99." />
+  <meta name="twitter:image"       content="https://pandastudiox.com/og-image.jpg" />
+
+  <!-- Favicon (emoji) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐼</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐼</text></svg>" />
+
+  <!-- Fonts (preloaded) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Razorpay SDK (uncomment when ready) -->
+  <!-- <script src="https://checkout.razorpay.com/v1/checkout.js"></script> -->
+
+  <!-- Critical inline styles (prevent FOUC) -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #060610;
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ── Loading screen ── */
+    #psx-loader {
+      position: fixed;
+      inset: 0;
+      background: #060610;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      z-index: 9999;
+      transition: opacity .5s ease, visibility .5s ease;
+    }
+    #psx-loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .loader-logo {
+      width: 70px; height: 70px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #FF1F4E, #CC1840);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 38px;
+      box-shadow: 0 0 40px rgba(255,31,78,.4);
+      animation: loaderPulse 1.5s ease-in-out infinite;
+    }
+    .loader-name {
+      font-family: 'Black Han Sans', 'Impact', sans-serif;
+      font-size: 22px;
+      letter-spacing: 4px;
+      color: #fff;
+    }
+    .loader-bar-wrap {
+      width: 200px; height: 3px;
+      background: rgba(255,255,255,.1);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .loader-bar {
+      height: 100%;
+      border-radius: 2px;
+      background: linear-gradient(90deg, #FF1F4E, #FFBA00);
+      animation: loaderFill 1.4s ease forwards;
+    }
+    .loader-sub {
+      font-size: 11px;
+      color: rgba(255,255,255,.35);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    @keyframes loaderPulse {
+      0%, 100% { transform: scale(1);    box-shadow: 0 0 40px rgba(255,31,78,.4); }
+      50%       { transform: scale(1.06); box-shadow: 0 0 60px rgba(255,31,78,.6); }
+    }
+    @keyframes loaderFill {
+      from { width: 0; }
+      to   { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loading screen -->
+  <div id="psx-loader">
+    <div class="loader-logo">🐼</div>
+    <div class="loader-name">PANDASTUDIOX</div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar"></div>
+    </div>
+    <div class="loader-sub">Loading your experience…</div>
+  </div>
+
+  <!-- React root -->
+  <div id="root"></div>
+
+  <!-- Hide loader after app mounts -->
+  <script>
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        var loader = document.getElementById("psx-loader");
+        if (loader) loader.classList.add("hidden");
+      }, 1500);
+    });
+  </script>
+
+  <!-- Vite entry -->
+  <script type="module" src="/main.jsx"></script>
+</body>
+</html>
